@@ -14,7 +14,7 @@ const app = express();
 const port = process.env.PORT || 4000;
 const corsOption = {
     origin: 'http://localhost:3000', // Update with your frontend URL
-    credentials: true
+    credentials: false
 };
 
 // Rest of your code remains the same...
