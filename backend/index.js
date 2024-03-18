@@ -12,10 +12,10 @@ import userRouter from "./routes/users.js";
 dotenv.config();
 const app = express();
 const port = process.env.PORT || 4000;
-const corsOption = {
-    origin: 'http://localhost:3000', // Update with your frontend URL
-    credentials: false
-};
+// const corsOption = {
+//     origin: '', // Update with your frontend URL
+//     credentials: f
+// };
 
 // Rest of your code remains the same...
 
@@ -25,16 +25,21 @@ const connect = async () => {
         await mongoose.connect(process.env.MONGO_URL, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-           
+
         });
         console.log("MongoDB connected successfully");
     } catch (error) {
         console.error("MongoDB connection failed:", error);
     }
 };
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    // Other CORS headers like Access-Control-Allow-Headers, Access-Control-Allow-Methods, etc. can be set here if needed.
+    next();
+});
 
 app.use(express.json());
-app.use(cors(corsOption));
+app.use(cors());
 app.use(cookieParser());
 
 app.use("/api/v1/auth", authRouter);
