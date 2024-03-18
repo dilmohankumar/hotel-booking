@@ -15,8 +15,8 @@ const port = process.env.PORT || 4000;
 
 // Define CORS options
 const corsOptions = {
-    origin: 'https://hotel-booking-6uqnc4xix-dilmohans-projects.vercel.app', // Update with your frontend URL
-    credentials: true // If you're using cookies or authorization headers, set this to true
+    origin: 'https://hotel-booking-6uqnc4xix-dilmohans-projects.vercel.app',
+    credentials: true // Set to true if you're using cookies or authorization headers
 };
 
 // Connect to MongoDB
@@ -29,6 +29,7 @@ const connect = async () => {
         console.log("MongoDB connected successfully");
     } catch (error) {
         console.error("MongoDB connection failed:", error);
+        process.exit(1); // Exit the process if MongoDB connection fails
     }
 };
 
