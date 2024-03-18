@@ -1,0 +1,48 @@
+.service img {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background: var(--secondary-color);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    line-height: 50px;
+    
+  
+}
+
+.col-lg-3 {
+   
+    width: 21%;
+}
+
+.service {
+    padding: 1rem;
+    border-bottom: 1px solid rgb(234, 214, 162);
+    border-right: 1px solid rgb(239, 217, 160);
+    border-radius: 0.5rem;
+    margin-right: 3rem;
+  
+    
+}
+.mb-4 h5{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.mb-4 p{
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    color: var(--bs-card-color);
+    padding: 34px 84p 19rem 21px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    top: 1rem;
+    padding-top: 5px;
+}

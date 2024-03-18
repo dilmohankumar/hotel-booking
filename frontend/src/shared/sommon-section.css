@@ -1,0 +1,14 @@
+.common_section{
+
+    background: url('../assets/images/tour.jpg') no-repeat center center;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+.common_section h1{
+    font-size: 2.5rem;
+    color: white;
+}
