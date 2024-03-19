@@ -15,7 +15,7 @@ const port = process.env.PORT || 4000;
 
 // Define CORS options
 const corsOptions = {
-    origin:`https://hotel-booking-fucuc2n7n-dilmohans-projects.vercel.app`,
+    origin:`https://hotel-booking-9cv7gcsdc-dilmohans-projects.vercel.app`,
     credentials: true // Set to true if you're using cookies or authorization headers
 };
 
