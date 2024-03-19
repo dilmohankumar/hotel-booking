@@ -18,6 +18,11 @@ const corsOptions = {
     origin:`https://hotel-booking-fllu6jwiu-dilmohans-projects.vercel.app`,
     credentials: true // Set to true if you're using cookies or authorization headers
 };
+// Enable CORS for all requests
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+  });
 
 // Connect to MongoDB
 const connect = async () => {
