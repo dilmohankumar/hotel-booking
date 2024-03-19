@@ -14,10 +14,10 @@ const app = express();
 const port = process.env.PORT || 4000;
 
 // Define CORS options
-var corsOptions = {
-    origin: "https://hotel-booking-9cv7gcsdc-dilmohans-projects.vercel.app",
-    credentials: true // Set to true if you're using cookies or authorization headers
-};
+// var corsOptions = {
+//     origin: "https://hotel-booking-9cv7gcsdc-dilmohans-projects.vercel.app",
+//     credentials: true // Set to true if you're using cookies or authorization headers
+// };
 
 // Connect to MongoDB
 const connect = async () => {
@@ -35,8 +35,12 @@ const connect = async () => {
 
 // Middleware
 app.use(express.json());
-app.use(cors(corsOptions)); // Apply CORS middleware
 app.use(cookieParser());
+app.use(
+    cors({
+        origin: `*`
+    }));
+app.use(cors());
 
 // Routes
 app.use("/api/v1/auth", authRouter);
