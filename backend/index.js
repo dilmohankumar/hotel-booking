@@ -13,13 +13,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 4000;
 
-// Define CORS options
-// var corsOptions = {
-//     origin: "https://hotel-booking-9cv7gcsdc-dilmohans-projects.vercel.app",
-//     credentials: true // Set to true if you're using cookies or authorization headers
-// };
 
-// Connect to MongoDB
 const connect = async () => {
     try {
         await mongoose.connect(process.env.MONGO_URL, {
@@ -33,16 +27,28 @@ const connect = async () => {
     }
 };
 
-// Middleware
+// // Middleware
 app.use(express.json());
 app.use(cookieParser());
 app.use(
     cors({
-        origin: `*`
-    }));
-app.use(cors());
+        origin: `*`,
+        origin: "http://localhost:3000",
+        credentials: true
+    })
+);
 
+
+// app.use((req, res, next) => {
+//     res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+//     res.header("Access-Control-Allow-Credentials", true);
+//     next();
+// });
 // Routes
+
+
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/tour", tourRouter);
 app.use("/api/v1/users", userRouter);

@@ -147,7 +147,7 @@ export const getFeaturedTour = async (req, res) => {
     }
 };
 
-// -----------------------------
+
 export const getTourCount = async (req, res) => {
     try {
         const tourCount = await Tour.estimatedDocumentCount();

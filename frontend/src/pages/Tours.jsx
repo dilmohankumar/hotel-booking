@@ -13,8 +13,7 @@ const Tour = () => {
   const [page, setPage] = useState(0);
 
   const { data: tours, loading, error } = useFetch(`${BASE_URL}/tour?page=${page}`);
-  const { page: tourCount } = useFetch(`${BASE_URL}/tour/search/getTourCount`);
-
+  const { page: tourCount } = useFetch(`${BASE_URL}/tour/getTourCount`);
 
   useEffect(() => {
     if (tourCount > 0) {
