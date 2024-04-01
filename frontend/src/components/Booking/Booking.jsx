@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
-import './booking.css';
-import { Form, FormGroup, ListGroup, ListGroupItem, Button } from 'reactstrap';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Button, Form, FormGroup, ListGroup, ListGroupItem } from 'reactstrap';
+import { AuthContext } from '../../context/AuthContext';
+import { BASE_URL } from '../../utils/config';
+import './booking.css';
 
 const Booking = ({ tour, avgRating }) => {
-    const { price, reviews } = tour;
-    const navigate=useNavigate()
+    const { price, reviews, title } = tour;
+    const navigate = useNavigate();
+    const { user } = useContext(AuthContext);
 
-    const [credentials, setCredentials] = useState({
-        userId: '01',
-        userEmail: 'kdilmohan101@gmail.com',
+    const [booking, setBooking] = useState({
+        userId: user && user._id,
+        userEmail: user && user.email,
+        tourName: title,
         fullname: '',
         phone: '',
         guestSize: '',
@@ -17,16 +21,40 @@ const Booking = ({ tour, avgRating }) => {
     });
 
     const handleChange = (e) => {
-        setCredentials(prev => ({ ...prev, [e.target.id]: e.target.value }));
+        setBooking(prev => ({ ...prev, [e.target.id]: e.target.value }));
     };
 
     const serviceFee = 10;
-    const totalAmount = Number(price) * Number(credentials.guestSize) + Number(serviceFee);
-    const handleClick = e => {
+    const totalAmount = Number(price) * Number(booking.guestSize) + Number(serviceFee);
+    const handleClick = async (e) => {
         e.preventDefault();
-       
-        navigate('/thank-you');
+        console.log(booking);
 
+        try {
+            if (!user || user === undefined || user === null) {
+                return alert('please sign in');
+            }
+
+            const res = await fetch(`${BASE_URL}/api/v1/booking`, {
+                method: 'post',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                credentials: 'include',
+                body: JSON.stringify(booking)
+            });
+
+            const result = await res.json();
+            if (!res.ok) {
+                return alert(result.message);
+            }
+            navigate('/thank-you');
+
+        } catch (err) {
+            alert(err.message);
+        }
+
+        navigate('/thank-you');
     };
 
     return (

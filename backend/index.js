@@ -33,7 +33,8 @@ app.use(cookieParser());
 app.use(
     cors({
         origin: `*`,
-        origin: "https://hotel-booking-coral-pi.vercel.app",
+        origin: "http://localhost:3000",
+        // origin: "https://hotel-booking-coral-pi.vercel.app",
         credentials: true
     })
 );

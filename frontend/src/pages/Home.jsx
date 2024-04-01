@@ -37,9 +37,9 @@ const Home = () => {
               </div>
             </Col>
             <Col lg="2">
-              <div className='hmbb' >
+              <div className='hmbb hero_video-box' >
                 <video className='hmb mt-4' src={heroVideo} alt='' controls /> {/* Fixed typo in variable name */}
-              </div>
+              </div> 
             </Col>
             <Col lg="2">
               <div className='hmbb'>

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Col, Container, Form, ListGroup, Row } from 'reactstrap';
 import avatar from '../assets/images/avatar.jpg';
@@ -12,8 +12,9 @@ import { BASE_URL } from '../utils/config'; // Fixed quotes
 
 const TourDetails = () => {
   const { id } = useParams();
-  const reviewmsgRef = useRef('');
+
   const [tourRating, setTourRating] = useState(null);
+  const [reviewText, setReviewText] = useState(''); // State to store the review text
   const { user } = useContext(AuthContext);
 
   // Fetching data for the specific tour
@@ -27,7 +28,8 @@ const TourDetails = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    const reviewtext = reviewmsgRef.current.value;
+    // Get the value of the review text input
+    const reviewtext = reviewText;
 
     try {
       if (!user) {
@@ -37,7 +39,7 @@ const TourDetails = () => {
 
       const reviewObj = {
         username: user?.username,
-        reviewText:reviewtext,
+        reviewText: reviewtext,
         rating: tourRating
       };
 
@@ -107,15 +109,15 @@ const TourDetails = () => {
                       Reviews({reviews?.length} Reviews)
                     </h4>
                     <Form onSubmit={submitHandler}>
-                      <div className='d-flex align-items-center gap-3 mb-4 rating__group'>
-                        {[...Array(5)].map((_, index) => (
-                          <span key={index} onClick={() => setTourRating(index + 1)}>
-                            {index + 1}<i className='ri-star-s-fill'></i>
-                          </span>
-                        ))}
-                      </div>
                       <div className='review__input'>
-                        <input type="text" ref={reviewmsgRef} placeholder='Share your thoughts' required />
+                        <input type="text" value={reviewText} onChange={(e) => setReviewText(e.target.value)} placeholder='Share your thoughts' required />
+                        <div className='d-flex align-items-center gap-3 mb-4 rating__group'>
+                          {[...Array(5)].map((_, index) => (
+                            <span key={index} onClick={() => setTourRating(index + 1)}>
+                              {index + 1}<i className='ri-star-s-fill'></i>
+                            </span>
+                          ))}
+                        </div>
                         <button className="btn primary__btn text-white" type='submit'>
                           Submit
                         </button>
@@ -130,7 +132,7 @@ const TourDetails = () => {
                               <div>
                                 <h5>{review.username}</h5>
                                 <p>
-                                  {new Date(review.date).toLocaleDateString('en-us', options)}
+                                  {new Date(review.createdAt).toLocaleDateString('en-us', options)}
                                 </p>
                               </div>
                               <span className='d-flex align-items-center'>

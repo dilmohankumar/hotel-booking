@@ -24,6 +24,7 @@ const navLinks = [
 const Header = () => {
 
   const headerRef = useRef(null)
+  const menuRef = useRef(null)
   const navigate = useNavigate()
   const { user, dispatch } = useContext(AuthContext)
   const logout = () => {
@@ -41,8 +42,9 @@ const Header = () => {
   }
   useEffect(() => {
     stickyHeaderFunc()
-    return () => window.removeEventListener('scroll', stickyHeaderFunc)
-  }, [])
+    return () => window.removeEventListener('scroll', stickyHeaderFunc);
+  } );
+  const toggleMenu=()=>menuRef.current.classList.toggle('show_menu')
 
 
   return (
@@ -56,7 +58,7 @@ const Header = () => {
             </div>
             {/* {logo} */}
             {/* {logo} */}
-            <div className='navigation'>
+            <div className='navigation' ref={menuRef} onClick={toggleMenu}>
               <ul className='menu d-flex align-items-center gap-5'>
                 {navLinks.map((item, index) => (
                   <li className='nav__item' key={index}>
@@ -86,7 +88,7 @@ const Header = () => {
                 }
 
               </div>
-              <span className='mobile_-menu'>
+              <span className='mobile_-menu' onClick={toggleMenu}>
                 <i className='ri-menu-line'></i>
               </span>
             </div>
