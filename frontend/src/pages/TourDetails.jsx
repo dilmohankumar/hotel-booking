@@ -57,7 +57,7 @@ const TourDetails = () => {
         return alert(result.message);
       }
       alert(result.message)
-      
+
     } catch (err) {
       alert(err.message);
     }
@@ -111,7 +111,7 @@ const TourDetails = () => {
                     <Form onSubmit={submitHandler}>
                       <div className='review__input'>
                         <input type="text" value={reviewText} onChange={(e) => setReviewText(e.target.value)} placeholder='Share your thoughts' required />
-                        <div className='d-flex align-items-center gap-3 mb-4 rating__group'>
+                        <div className='d-flex align-items-center gap-2 rating__group'>
                           {[...Array(5)].map((_, index) => (
                             <span key={index} onClick={() => setTourRating(index + 1)}>
                               {index + 1}<i className='ri-star-s-fill'></i>
@@ -139,7 +139,7 @@ const TourDetails = () => {
                                 {review.rating} <i className='ri-star-s-fill'></i>
                               </span>
                             </div>
-                            <h6>{review.reviewtext}</h6>
+                            <h6>{review.reviewText}</h6>
                           </div>
                         </div>
                       ))}
@@ -161,3 +161,5 @@ const TourDetails = () => {
 };
 
 export default TourDetails;
+
+

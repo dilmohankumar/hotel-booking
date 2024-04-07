@@ -1,9 +1,8 @@
 import React from 'react';
-import './footer.css'
-import { Container, Row, Col, ListGroup, ListGroupItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/images/logo.png';
-import galleryImages from '../images-gallery/imagesgalley';
+import { Col, Container, ListGroup, ListGroupItem, Row } from 'reactstrap';
+import logo from '../../assets/images/room.logo.png';
+import './footer.css';
 
 
 
@@ -11,15 +10,15 @@ import galleryImages from '../images-gallery/imagesgalley';
 const Quick__links = [
   {
     path: '/home',
-    display: 'Home'
+    display: 'HOME'
   },
   {
     path: '/about',
-    display: 'About'
+    display: 'ABOUT'
   },
   {
     path: '/tours',
-    display: 'Tours'
+    display: 'ROOMS'
   },
 ];
 
@@ -27,20 +26,20 @@ const Quick__links = [
 const Quick__links2 = [
   {
     path: '/gallery',
-    display: 'Gallery'
+    display: 'GALLERY'
   },
   {
     path: '/login',
-    display: 'Login'
+    display: 'LOGIN'
   },
   {
     path: '/register',
-    display: 'Register'
+    display: 'REGISTER'
   },
 ];
 
 const Footer = () => {
-  const year=new Date().getFullYear()
+  const year = new Date().getFullYear()
   return (
     <footer className='footer'>
       <Container>
@@ -48,11 +47,9 @@ const Footer = () => {
           <Col lg='3'>
             <div className='logo'>
               <img src={logo} alt=''></img>
-              <p>Lorem ipsum dolor, sit amet consectetur
-                adipisicing elit. At in alias vero placeat
-                ! Voluptatem eius similique suscipit! Eum, d
-                electus numquam. Quas, aperiam porro voluptatum
-                unde suscipit nostrum enim voluptatibus sunt?</p>
+              <p>Unlock your next adventure with exclusive
+                travel insights and offers. Subscribe now for
+                curated content and expert tips</p>
               <div className='social__links d_flex align-item-center gap-4'>
                 <span>
                   <Link to='#'><i className='ri-youtube-line'></i></Link>
@@ -127,10 +124,10 @@ const Footer = () => {
             </ListGroup>
           </Col>
           <Col lg='12' className='text-center pt-5'>
-          <p className="Copyright">Copyright{year}, design and develop by dilmoan kumar.ALL rights reserved.</p>
+            <p className="Copyright">Copyright{year}, design and develop by dilmoan kumar.ALL rights reserved.</p>
           </Col>
 
-           
+
         </Row>
       </Container>
 

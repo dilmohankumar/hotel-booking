@@ -31,17 +31,21 @@ const Booking = ({ tour, avgRating }) => {
         console.log(booking);
 
         try {
-            if (!user || user === undefined || user === null) {
+            if (!user) {
                 return alert('please sign in');
             }
 
-            const res = await fetch(`${BASE_URL}/api/v1/booking`, {
+            const dataObj = {
+                ...booking,
+                bookAt: new Date(booking?.bookAt)
+            }
+            const res = await fetch(`${BASE_URL}/Booking`, {
                 method: 'post',
                 headers: {
                     'content-type': 'application/json'
                 },
                 credentials: 'include',
-                body: JSON.stringify(booking)
+                body: JSON.stringify(dataObj)
             });
 
             const result = await res.json();

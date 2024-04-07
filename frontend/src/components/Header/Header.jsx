@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { Button, Container, Row } from 'reactstrap';
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/room.logo.png';
 import { AuthContext } from '../../context/AuthContext';
 
 import './header.css';
@@ -9,42 +9,42 @@ import './header.css';
 const navLinks = [
   {
     path: '/home',
-    display: 'Home'
+    display: 'HOME'
   },
   {
     path: '/about',
-    display: 'About'
+    display: 'ABOUT'
   },
   {
     path: '/tours',
-    display: 'Tours'
+    display: 'ROOMS'
   },
 ];
 
 const Header = () => {
 
-  const headerRef = useRef(null)
-  const menuRef = useRef(null)
-  const navigate = useNavigate()
-  const { user, dispatch } = useContext(AuthContext)
+  const headerRef = useRef(null);
+  const menuRef = useRef(null);
+  const navigate = useNavigate();
+  const { user, dispatch } = useContext(AuthContext);
   const logout = () => {
-    dispatch({ type: 'LOGOUT' })
-    navigate('/')
-  }
+    dispatch({ type: 'LOGOUT' });
+    navigate('/');
+  };
   const stickyHeaderFunc = () => {
     window.addEventListener('scroll', () => {
       if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        headerRef.current.classList.add('sticky__header')
+        headerRef.current.classList.add('sticky__header');
       } else {
-        headerRef.current.classList.remove('sticky__header')
+        headerRef.current.classList.remove('sticky__header');
       }
-    })
-  }
+    });
+  };
   useEffect(() => {
-    stickyHeaderFunc()
+    stickyHeaderFunc();
     return () => window.removeEventListener('scroll', stickyHeaderFunc);
-  } );
-  const toggleMenu=()=>menuRef.current.classList.toggle('show_menu')
+  }, []);
+  const toggleMenu = () => menuRef.current.classList.toggle('show_menu');
 
 
   return (
@@ -75,14 +75,14 @@ const Header = () => {
                 {
                   user ? <>
                     <h5 className='mb-0'>{user.username}</h5>
-                    <Button className='btn btn-dark' on onClick={logout}>Logout</Button>
+                    <Button className='btn btn-dark' onClick={logout}>Logout</Button>
                   </> : <>
 
                     <Button className='btn secondary__btn'>
-                      <Link to='/login'>Login</Link>
+                      <Link to='/login'>LOGIN</Link>
                     </Button>
                     <Button className='btn primary__btn'>
-                      <Link to='/register'>Register</Link>
+                      <Link to='/register'>REGISTER</Link>
                     </Button>
                   </>
                 }

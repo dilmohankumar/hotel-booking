@@ -17,9 +17,9 @@ const Tour = () => {
 
   useEffect(() => {
     if (tourCount > 0) {
-      const calculatedPageCount = Math.ceil(tourCount / 8); 
+      const calculatedPageCount = Math.ceil(tourCount / 8);
       setPageCount(calculatedPageCount);
-      window.scrollTo(0,0);
+      window.scrollTo(0, 0);
     }
   }, [tourCount]);
 
@@ -27,10 +27,10 @@ const Tour = () => {
     setPage(pageNumber);
   };
 
-  
+
   return (
     <>
-      <Commonsection title={'All tours'} />
+      <Commonsection title={'All Rooms'} />
       <section>
         <Container>
           <Row>
@@ -45,7 +45,7 @@ const Tour = () => {
           {!loading && !error && (
             <Row>
               {tours?.map(tour => (
-                <Col lg='3' md='6' sm='6'className='tourr mb-4' key={tour._id}>
+                <Col lg='3' md='6' sm='6' className='tourr mb-4' key={tour._id}>
                   <TourCard tour={tour} />
                 </Col>
               ))}

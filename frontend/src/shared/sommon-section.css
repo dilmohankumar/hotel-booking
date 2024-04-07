@@ -1,14 +1,21 @@
-.common_section{
+.common_section {
 
-    background: url('../assets/images/tour.jpg') no-repeat center center;
+    /* background: url('../assets/images/gallery-04.jpg') no-repeat center center; */
+    background-color: #0056ff94;
     background-size: cover;
-    height: 300px;
+
+    height: 8rem;
     display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
 }
-.common_section h1{
-    font-size: 2.5rem;
-    color: white;
-}
+
+.common_section h1 {
+    color: font;
+    font: initial;
+    font-size: 1rem;
+    font-weight: 100;
+    margin-bottom: -7px;
+    font-family: cursive;}

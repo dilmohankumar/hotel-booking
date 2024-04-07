@@ -1,132 +1,132 @@
 [
   {
-    "title": "let Westminister Bridge",
-    "city": "London",
-    "address": "Somewhere in London",
-    "distance": 300,
-    "price": 99,
+    "title": "Taj Mahal Palace",
+    "city": "Mumbai",
+    "address": "Apollo Bunder, Mumbai, Maharashtra 400001",
+    "distance": 20,
+    "price": 150,
     "maxGroupSize": 10,
-    "desc": "this is the description",
+    "desc": "Luxurious stay overlooking the Gateway of India",
     "reviews": [],
-
     "photo": "/tour-images/tour-img01.jpg",
     "featured": true
   },
   {
-    "title": "let Bali, Indonesia",
-    "city": "Bali",
-    "address": "Somewhere in Indonesia",
-    "distance": 400,
-    "price": 99,
+    "title": "Umaid Bhawan Palace",
+    "city": "Jodhpur",
+    "address": "Circuit House Rd, Cantt Area, Jodhpur, Rajasthan 342006",
+    "distance": 10,
+    "price": 200,
     "maxGroupSize": 8,
-    "desc": "this is the description",
+    "desc": "Experience royal hospitality in the heart of Jodhpur",
     "reviews": [],
-
     "photo": "/tour-images/tour-img02.jpg",
     "featured": true
   },
   {
-    "title": "beautigul Snowy Mountains",
-    "city": "Bangkok",
-    "address": "Somewhere in Thailand",
-    "distance": 500,
-    "price": 99,
+    "title": "The Oberoi Amarvilas",
+    "city": "Agra",
+    "address": "Taj East Gate Rd, Paktola, Tajganj, Agra, Uttar Pradesh 282001",
+    "distance": 5,
+    "price": 180,
     "maxGroupSize": 8,
-    "desc": "this is the description",
+    "desc": "Luxury hotel offering stunning views of the Taj Mahal",
     "reviews": [],
-
     "photo": "/tour-images/tour-img03.jpg",
     "featured": true
   },
   {
-    "title": "let Beautiful Sunrise, Thailand",
-    "city": "Phuket",
-    "address": "Somewhere in Thailand",
-    "distance": 500,
-    "price": 99,
+    "title": "Leela Palace",
+    "city": "New Delhi",
+    "address": "Diplomatic Enclave, Chanakyapuri, New Delhi, Delhi 110023",
+    "distance": 15,
+    "price": 220,
     "maxGroupSize": 8,
-    "desc": "this is the description",
-    "reviews": [],
-
+    "desc": "A blend of luxury and Indian heritage in New Delhi",
+    "reviews": [
+      {
+        "name": "Emily Johnson",
+        "rating": 4.6
+      }
+    ],
+    "avgRating": 4.5,
     "photo": "/tour-images/tour-img04.jpg",
     "featured": true
   },
   {
-    "title": "Nusa Pendia Bali, Indonesia",
-    "city": "Bali",
-    "address": "Somewhere in Indonesia",
-    "distance": 500,
-    "price": 99,
+    "title": "The Taj Mahal Hotel",
+    "city": "New Delhi",
+    "address": "Number One Mansingh Road, New Delhi, Delhi 110011",
+    "distance": 15,
+    "price": 200,
     "maxGroupSize": 8,
-    "desc": "this is the description",
-    "reviews": [],
-
+    "desc": "Iconic luxury hotel offering a memorable experience",
+    "reviews": [
+      {
+        "name": "Mark Anderson",
+        "rating": 4.6
+      }
+    ],
+    "avgRating": 4.5,
     "photo": "/tour-images/tour-img05.jpg",
-    "featured": true
-  },
-  {
-    "title": "Cherry Blossoms Spring",
-    "city": "Tokyo",
-    "address": "Somewhere in Japan",
-    "distance": 500,
-    "price": 99,
-    "maxGroupSize": 8,
-    "desc": "this is the description",
-    "reviews": [],
-
-    "photo": "/tour-images/tour-img06.jpg",
-    "featured": true
-  },
-  {
-    "title": "Holmen Lofoten, France",
-    "city": "Paris",
-    "address": "Somewhere in France",
-    "distance": 500,
-    "price": 99,
-    "maxGroupSize": 8,
-    "desc": "this is the description",
-    "reviews": [],
-
-    "photo": "/tour-images/tour-img07.jpg",
-    "featured": true
-  },
-  {
-    "title": "Snowy Mountains, Thailand",
-    "city": "Bangkok",
-    "address": "Somewhere in Thailand",
-    "distance": 500,
-    "price": 99,
-    "maxGroupSize": 8,
-    "desc": "this is the description",
-    "reviews": [],
-
-    "photo": "/tour-images/tour-img03.jpg",
-    "featured": true
-  },
-  {
-    "title": "Jaflong, Sylhet",
-    "city": "Sylhet",
-    "address": "Somewhere in Sylhet",
-    "distance": 100,
-    "price": 99,
-    "maxGroupSize": 5,
-    "desc": "this is the description",
-    "reviews": [],
-
-    "photo": "/tour-images/tour-img08.jpg",
     "featured": false
   },
   {
-    "title": "Cox's Bazar Sea Beach",
-    "city": "Chittagong",
-    "address": "Somewhere in Chittagong",
-    "distance": 500,
-    "price": 99,
+    "title": "Taj Falaknuma Palace",
+    "city": "Hyderabad",
+    "address": "Engine Bowli, Falaknuma, Hyderabad, Telangana 500053",
+    "distance": 10,
+    "price": 250,
     "maxGroupSize": 8,
-    "desc": "this is the description",
-    "reviews": [],
-
-    "photo": "/tour-images/tour-img09.jpg",
+    "desc": "Experience the grandeur of Nizami hospitality",
+    "reviews": [
+      {
+        "name": "Michael Brown",
+        "rating": 4.6
+      },
+      {
+        "name": "Sophia Lee",
+        "rating": 4.6
+      }
+    ],
+    "avgRating": 4.5,
+    "photo": "/tour-images/tour-img06.jpg",
+    "featured": false
+  },
+  {
+    "title": "Wildflower Hall, An Oberoi Resort",
+    "city": "Shimla",
+    "address": "Chharabra, Shimla, Himachal Pradesh 171012",
+    "distance": 20,
+    "price": 180,
+    "maxGroupSize": 8,
+    "desc": "Luxury resort amidst the scenic beauty of Shimla",
+    "reviews": [
+      {
+        "name": "Alex Clark",
+        "rating": 4.6
+      }
+    ],
+    "avgRating": 4.5,
+    "photo": "/tour-images/tour-img07.jpg",
+    "featured": false
+  },
+  {
+    "title": "The Leela Palace",
+    "city": "Udaipur",
+    "address": "Lake Pichola, Udaipur, Rajasthan 313001",
+    "distance": 15,
+    "price": 220,
+    "maxGroupSize": 8,
+    "desc": "A luxurious retreat on the banks of Lake Pichola",
+    "reviews": [
+      {
+        "name": "David Wilson",
+        "rating": 4.6
+      }
+    ],
+    "avgRating": 4.5,
+    "photo": "/tour-images/tour-img08.jpg",
     "featured": false
   }
 ]

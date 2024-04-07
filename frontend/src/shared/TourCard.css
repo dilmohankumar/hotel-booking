@@ -1,23 +1,20 @@
 .tour__img img {
     width: 100%;
     border-radius: 5px 5px 0 0;
-
-
-
+    height: fit-content;
+    height: auto;
+    height: 9rem;
 }
 
-.tour__card{
+.tour__card {
     border: none !important;
     box-shadow: rgb(230, 227, 227) 0px 18px 50px -10px;
     padding-bottom: 1rem;
     height: 18rem;
-   
 }
-
 
 .tour__img {
     position: relative;
-
 }
 
 .tour__img span {
@@ -27,13 +24,15 @@
     width: max-content;
     height: max-content;
     z-index: 10;
-    background: var(--primary-color);
+    background: #443ea7;
     color: #ddd;
-    padding: .3rem .5rem;
-    border-radius: 3px 0 0 0;
+    padding: 0.1rem 1rem;
+    border-radius: 11px 0 0 0;
+    font-size: 12px;
+    font-family: unset;
 }
 
-.card__top span i {
+.tour__top span i {
     color: var(--secondary-color);
 }
 
@@ -54,7 +53,6 @@
 }
 
 .tour__title {
-
     margin-top: 1rem;
     font-size: 1.1rem;
     cursor: pointer;
@@ -65,52 +63,54 @@
     transition: .3s;
     font-weight: 500;
     font-size: 10px;
+    color: #047104;
 }
 
 .tour__title a:hover {
     color: var(--secondary-color);
 }
-.card__bottom h5{
+
+.tour__bottom h5 {
     color: var(--secondary-color);
     font-size: 1.1rem;
     font-weight: 400;
 }
-.card__bottom h5 span{
+
+.tour__bottom h5 span {
     font-weight: 500;
     color: var(--text-color);
     font-size: 0.8rem;
-
 }
-.booking__btn{
-    background: var(--secondary-color)!important;
+
+.booking__btn {
+    background: var(--secondary-color) !important;
     cursor: pointer;
-    padding: 0.2rem 0.5rem !important;
-    width: 9rem;
-
+    padding: 0rem 0rem !important;
+    width: 8rem;
 }
-.booking__btn a{
+
+.booking__btn a {
     color: #fff;
     text-decoration: none;
-    font-size: .9rem;
-    
+    font-size: 0.8rem;
+}
 
-}
-.booking__btn a:hover{
+.booking__btn a:hover {
     color: #f9f7f7;
-    
 }
-@media only screen and (max-width:992px){
-    .tour__title{
+
+@media only screen and (max-width:992px) {
+    .tour__title {
         font-size: 1rem;
     }
-    .booking__btn a{
+    .booking__btn a {
         font-size: 0.8rem;
     }
-    .booking__btn{
+    .booking__btn {
         padding: 0.2rem 0.5rem !important;
     }
     .tour__location,
-    .tour__Rating{
+    .tour__Rating {
         font-size: 0.8rem;
     }
 }

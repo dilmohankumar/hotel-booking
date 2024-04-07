@@ -10,18 +10,18 @@ import weatherImg from '../assets/images/weather.png';
 const servicesData = [
     {
         imgUrl: weatherImg,
-        title: 'Calculate Weather',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        title: 'UPDATES',
+        desc: 'Real-time updates on room availability and pricing.',
     },
     {
         imgUrl: guideImg,
-        title: 'Best Tour Guide',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        title: 'CUSTOMER',
+        desc: 'Guest reviews and ratings for each room.',
     },
     {
         imgUrl: customizationImg,
-        title: 'Customization',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        title: 'SEARCH',
+        desc: 'Advanced search filters for specific room types.',
     },
 ];
 
@@ -29,11 +29,11 @@ const ServiceList = () => {
     return (
         <>
             {servicesData.map((item, index) => (
-                <Col lg="3" md="6" sm="12" className="mb-4" key={index}> 
+                <Col lg="3" md="6" sm="12" className="mb-4" key={index}>
                     <ServiceCard item={item} />
                 </Col>
             ))}
-            
+
         </>
     );
 };

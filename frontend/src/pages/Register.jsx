@@ -10,39 +10,37 @@ import { BASE_URL } from '../utils/config';
 
 const Register = () => {
 
-
-  
   const [credentials, setCredentials] = useState({
-    username:'undefined',
-    email: 'undefined',
-    password: 'undefined'
+    username: '',
+    email: '',
+    password: ''
   });
 
-    const {dispatch}=useContext(AuthContext)
-    const navigate =useNavigate()
+  const { dispatch } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setCredentials(prev => ({ ...prev, [e.target.id]: e.target.value }));
   };
 
-  const handleClick =async  (e) => {
+  const handleClick = async (e) => {
     e.preventDefault();
-    try{
-      const res =await fetch(`${BASE_URL}/auth/register`,{
-        method:`post`,
-        headers:{
-          'content-type':'application/json'
+    try {
+      const res = await fetch(`${BASE_URL}/auth/register`, {
+        method: 'post',
+        headers: {
+          'content-type': 'application/json'
         },
-          body:JSON.stringify(credentials),
-      })
-      const result=await res.json()
-      if(!res.ok)alert(result.message)
+        body: JSON.stringify(credentials),
+      });
+      const result = await res.json();
+      if (!res.ok) alert(result.message);
 
-      dispatch({type:'REGISTER_SUCCESS'})
-      navigate('/login')
+      dispatch({ type: 'REGISTER_SUCCESS' });
+      navigate('/login');
 
-    }catch(err){
-        alert(err.message);
+    } catch (err) {
+      alert(err.message);
     }
 
   };
@@ -62,7 +60,7 @@ const Register = () => {
                 </div>
                 <h2>Register</h2>
                 <Form onSubmit={handleClick}>
-                <FormGroup>
+                  <FormGroup>
                     <input type="text" placeholder='username' required id='username' onChange={handleChange} />
                   </FormGroup>
                   <FormGroup>
@@ -71,9 +69,9 @@ const Register = () => {
                   <FormGroup>
                     <input type="password" placeholder='password' required id='password' onChange={handleChange} />
                   </FormGroup>
-                  <Button className='btn secondary_btn auth_btn' type='submit'>create Account </Button>
+                  <Button className='btn secondary_btn auth_btn' type='submit'>Create Account</Button>
                 </Form>
-                <p>already have an account? <Link to='/login'>Login</Link></p>
+                <p>Already have an account? <Link to='/login'>Login</Link></p>
               </div>
             </div>
           </Col>

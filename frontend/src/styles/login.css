@@ -1,42 +1,54 @@
-.login_img{
-    width: 60%;
+.login_img {
+    width: 50%;
     text-align: center;
-}
-.login_img img{
-    width: 70% ;
-    object-fit: contain;
+    background-color: #67459dda;
+    border-radius: 1rem 0rem 0rem 1rem;
+
 }
 
-.login_form{
-    padding: 50px;
-    background: var(--secondary-color);
-    position: relative;
+.login_img img {
+    width: 100%;
+    object-fit: contain;
+  
 }
-.login_container{
+
+.login_form {
+    padding: 50px;
+    /* background: var(--secondary-color); */
+    position: relative;
+    width: 50%;
+    background: #a3a8e9;
+    border-radius: 0rem 1rem 1rem 0rem;
+}
+
+.login_container {
     box-shadow: rgb(169, 168, 168) 0px 48px 100px 0px;
     margin-top: 100px;
+    border-radius: 1rem;
 }
-.login_form .user{
-    width: 80px;
-    height: 80px;
+
+.login_form .user {
+    width: 81px;
+    height: 66px;
     position: absolute;
-    top: -9;
-    left: 50%;
+    top: 74px;
+    left: 56%;
     transform: translate(-50%, -105%);
 
 }
-.login_form .user img{
-    width: 100%;
+
+.login_form .user img {
+    width: 50%;
 }
-.login_form h2{
-color: aliceblue;
-text-align: center;
-margin-bottom: 2rem;
+
+.login_form h2 {
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 2rem;
 }
-.login_form{
-width: 45%;
-}
-.login_form input{
+
+
+.login_form input {
     width: 100%;
     padding: 0.5rem 1rem;
     border-radius: 5px;
@@ -44,47 +56,55 @@ width: 45%;
     font-size: 1rem;
     color: var(--heading-color);
 }
-.login_form input:focus{
+
+.login_form input:focus {
     outline: none;
 }
-.auth_btn{
-    background: var(--heading-color)!important;
+
+.auth_btn {
+    background: var(--heading-color) !important;
     width: 100%;
-    color: aliceblue!important;
+    color: aliceblue !important;
 }
-.login_form p{
+
+.login_form p {
     font-size: 0.9rem;
     color: #ffffff;
     margin-top: 1.5rem;
     text-align: center;
 }
-.login_form p a{
+
+.login_form p a {
     color: var(--heading-color);
     text-decoration: none;
     margin-left: 5px;
     font-weight: 500;
 }
 
-@media only screen and (max-width:768px){
-    .login_img{
+@media only screen and (max-width:768px) {
+    .login_img {
         display: none;
     }
-    .login_form{
+
+    .login_form {
         width: 70%;
         margin: auto;
     }
-    .login_container{
+
+    .login_container {
         padding-bottom: 3rem;
         margin-top: 70px;
     }
-    
+
 }
-@media only screen and (max-width:576px){
-    .login_form{
+
+@media only screen and (max-width:576px) {
+    .login_form {
         width: 100%;
     }
-    .login_container{
+
+    .login_container {
         padding-bottom: 1rem;
     }
-    
+
 }

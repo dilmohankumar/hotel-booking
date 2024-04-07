@@ -1,18 +1,15 @@
 import React from 'react';
 import './service-card.css';
-const ServiceCard = ({item}) => {
-    const{imgUrl,title,desc}=item;
-  return (
-    <div>
-        <div>
-            <img src={imgUrl} alt=''/>
 
+const ServiceCard = ({ item }) => {
+    const { imgUrl, title, desc } = item;
+    return (
+        <div className="service">
+            <img src={imgUrl} alt='' />
+            <h5>{title}</h5>
+            <p>{desc}</p>
         </div>
-        <h5>{title}</h5>
-        <p>{desc}</p>
-    </div>
-  )
-}
+    );
+};
 
-
-export default ServiceCard
+export default ServiceCard;

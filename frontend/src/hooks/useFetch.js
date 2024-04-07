@@ -18,7 +18,6 @@ const useFetch = (url) => {
                 }
 
                 const result = await res.json();
-                console.log(`result`,result)
 
                 if (isMounted) {
                     setData(result.data);

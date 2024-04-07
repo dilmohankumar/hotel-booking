@@ -23,9 +23,9 @@ const SearchBar = () => {
         if (!res.ok) alert('something went wrong')
         const result = await res.json()
 
-    console.log(`Distance`,Distance)
-console.log(`city`,location)
-        navigate(`/tour/search?city=${location}&Distance=${Distance}&maxGroupSize=${maxGroupSize}`,{ state: result.data })
+        console.log(`Distance`, Distance)
+        console.log(`city`, location)
+        navigate(`/tour/search?city=${location}&Distance=${Distance}&maxGroupSize=${maxGroupSize}`, { state: result.data })
     };
 
     return (

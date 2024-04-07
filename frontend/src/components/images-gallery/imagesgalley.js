@@ -5,15 +5,26 @@ import galleryImg04 from '../../assets/images/gallery-04.jpg'
 import galleryImg05 from '../../assets/images/gallery-05.jpg'
 import galleryImg06 from '../../assets/images/gallery-06.jpg'
 import galleryImg07 from '../../assets/images/gallery-07.jpg'
+import galleryImg08 from '../../assets/images/gallery-08.jpg'
+import galleryImg09 from '../../assets/images/gallery-09.jpg'
+import galleryImg10 from '../../assets/images/gallery-10.jpg'
 
-
-const galleryImages=[
-galleryImg01,
-galleryImg02,
-galleryImg03,
-galleryImg04,
-galleryImg05,
-galleryImg06,
-galleryImg07,
+const galleryImages = [
+    galleryImg01,
+    galleryImg02,
+    galleryImg03,
+    galleryImg01,
+    galleryImg02,
+    galleryImg03,
+    galleryImg04,
+    galleryImg05,
+    galleryImg06,
+    galleryImg07,
+    galleryImg08,
+    galleryImg09,
+    galleryImg10,
+    galleryImg08,
+    galleryImg09,
+    galleryImg10,
 ]
 export default galleryImages;

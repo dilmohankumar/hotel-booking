@@ -1,69 +1,83 @@
 .search-bar {
     padding: 0.5rem 1rem;
-    border-radius: 50px;
+    border-radius: 10px;
     box-shadow: #d0cfcf 0px 48px 100px 0px;
     width: max-content;
     margin-top: 50px;
-   margin-left: 0;
-  
-
-    
- 
+    margin-left: 6rem;
+    background: white;
+   
 }
 
 .form__group span {
     font-size: 1.8rem;
-    color: red;   
-
+    color: red;
 }
-.form__group input{
+
+.form__group input {
     border: none;
     font-size: 0.9rem;
     color: var(--heading-color);
     font-weight: 500;
 }
-.form__group input:focus{
-    outline:none;
+
+.form__group input:focus {
+    outline: none;
 }
-.form__group h6{
+
+.form__group h6 {
     margin-bottom: 0;
 }
 
-.form__group-fast{
-border-right: 2px solid #ddd;
+.form__group-fast {
+    border-right: 2px solid #ddd;
 }
-.ri-search-line{
+
+.ri-search-line {
     font-size: 1.6rem;
     padding: 0.5rem;
     background: var(--secondary-color);
     color: #fff;
-    border-radius: 10px 5px 10px 5px;
+    border-radius: 16px 16px 16px 16px;
     cursor: pointer;
-
-
+    margin-left: 13px;
 }
+
 @media only screen and (max-width:992px) {
-    .search-bar{
+    .search-bar {
         width: 100%;
     }
-    .search-bar form{
+
+    .search-bar form {
         flex-wrap: wrap;
     }
-    .search-bar form .form__group{
+
+    .search-bar form .form__group {
         width: 48%;
     }
 }
+
 @media only screen and (max-width:576px) {
-            .search-bar form .form__group{
-                width: 100%;
-            }
-            .form__group input{
-                font-size: 0.7rem;
-            }
-            .form__group span i{
-                font-size: 1.1rem;
-            }
-            .form__group h6{
-                font-size: 1rem;
-            }
+    .search-bar form .form__group {
+        width: 100%;
+    }
+   
+
+    .form__group input {
+        font-size: 0.7rem;
+    }
+
+    .form__group span i {
+        font-size: 1.1rem;
+    }
+
+    .form__group h6 {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 992px){
+.search-bar {
+    width: 71%;
+}
 }
